@@ -7,7 +7,7 @@ var rotaHome = require('./app/routes/home')(app);//ou assim
 var rotaFormularioInclusaoNoticia = require('./app/routes/formulario_inclusao_noticia')(app);
 //vars
 //seta a porta como variavel
-var port = 80;
+var port = 8080;
 
 
 
