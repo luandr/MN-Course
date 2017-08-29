@@ -1,16 +1,9 @@
 //cfg app
 var app = require('./config/server');
 
-
-//routes old
-/* var rotaNoticias = require('./app/routes/noticias');
-rotaNoticias(app); //pode ser feito assim
-var rotaHome = require('./app/routes/home')(app);//ou assim
-var rotaFormularioInclusaoNoticia = require('./app/routes/formulario_inclusao_noticia')(app); */
-
 //vars
-//seta a porta como variavel
-var port = 8080;
+var port = 8080; //seta a porta como variavel
+
 
 
 //escuta a porta 'port'
