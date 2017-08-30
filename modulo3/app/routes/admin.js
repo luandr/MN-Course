@@ -5,10 +5,10 @@ module.exports = (app) => {
     });
     app.post('/noticias/salvar', (req, res) => {
         var conn = app.config.dbConn();
-        var noticiaModel = app.app.models.noticiaModel;
+        var noticiaModel = new app.app.models.NoticiasDAO(conn);
         var noticia = req.body;
 
-        noticiaModel.salvarNoticia(noticia, conn, (err, result) => {
+        noticiaModel.salvarNoticia(noticia, (err, result) => {
             if (err) {
                 res.render('noticias/noticias', { error: err });
             }
