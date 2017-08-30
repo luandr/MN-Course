@@ -2,9 +2,9 @@ module.exports = (app) => {
 
     app.get('/noticias', (req, res) => {
         var conn = app.config.dbConn();
-        var noticiasModel = app.app.models.noticiasModel;
+        var noticiaModel = app.app.models.noticiaModel;
 
-        noticiasModel.getNoticias(conn, (err, result) => {
+        noticiaModel.getNoticias(conn, (err, result) => {
             if (err) {
                 res.render('noticias/noticias', { error: err });
             }
