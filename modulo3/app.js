@@ -2,7 +2,7 @@
 var app = require('./config/server');
 
 //vars
-var port = 80; //seta a porta como variavel
+var port = 3000; //seta a porta como variavel
 
 
 
