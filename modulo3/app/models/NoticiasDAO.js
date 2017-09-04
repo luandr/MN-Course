@@ -2,12 +2,12 @@ function NoticiasDAO(conn) {
     this._conn = conn;
 }
 
-NoticiasDAO.prototype.getNoticia = function (callback) {
-    this._conn.query('select id, titulo, noticia from noticias where id=1', callback);
+NoticiasDAO.prototype.getNoticia = function (id_noticia, callback) {
+    this._conn.query('select autor, titulo, noticia, data_noticia from noticias where id=' + id_noticia.id_noticia, callback);
 }
 
 NoticiasDAO.prototype.getNoticias = function (callback) {
-    this._conn.query('select id, titulo, noticia from noticias', callback);
+    this._conn.query('select id, titulo, noticia, data_noticia from noticias order by data_criacao desc', callback);
 }
 
 NoticiasDAO.prototype.salvarNoticia = function (obj, callback) {
